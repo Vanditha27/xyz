@@ -1,0 +1,128 @@
+Jenkins Pipeline Scripting Topics
+1. Basics
+
+What is a Pipeline? (Declarative vs Scripted)
+
+node, pipeline, agent, stages, steps
+
+Difference between job and pipeline
+
+Pipeline syntax (Declarative vs Groovy Scripted)
+
+2. Groovy Fundamentals (since Jenkins pipelines use Groovy)
+
+Variables (def, environment variables)
+
+Data types: String, List, Map
+
+Operators (+, ==, etc.)
+
+Input/Output (echo, print)
+
+Loops (for, while, each)
+
+Conditional statements (if, else, switch)
+
+Functions (def myFunction())
+
+Closures (important for parallel execution)
+
+3. Pipeline Controls
+
+script { } block (when to use it)
+
+when conditions (run stages only if condition is true)
+
+Post actions (post { success, failure, always })
+
+Retry logic (retry(n) { })
+
+Timeout (timeout(time: 5, unit: 'MINUTES') { })
+
+Error handling (catchError, try/catch)
+
+4. Loops in Jenkins Pipelines
+
+for loop (with numbers, lists, ranges)
+
+Iterating over arrays/lists
+
+Iterating over maps (key/value)
+
+Nested loops
+
+Using loops for:
+
+Running same step multiple times
+
+Deploying to multiple servers
+
+Running parallel jobs
+
+5. Functions in Pipelines
+
+Defining functions (def myFunc())
+
+Functions with parameters
+
+Returning values from functions
+
+Reusable shared library functions
+
+Function scope (inside script block vs global)
+
+6. Parallel & Matrix Execution
+
+Running multiple tasks in parallel
+
+Using loops to generate parallel branches
+
+matrix { } in declarative pipeline
+
+7. Pipeline Stages & Steps
+
+stage basics
+
+Nested stages
+
+Running stages conditionally
+
+steps like sh, bat, echo, checkout, input
+
+8. Integration with Git & Build Tools
+
+checkout scm
+
+Cloning repositories
+
+Pulling private repos with credentials
+
+Running Maven/Gradle builds
+
+Pushing artifacts
+
+9. Credentials & Secrets
+
+withCredentials block
+
+Username/Password
+
+SSH Keys
+
+Tokens
+
+10. Advanced Pipeline Features
+
+Shared libraries (reusable functions across projects)
+
+Dynamic stages (generate stages with loops)
+
+Jenkinsfile in SCM
+
+Using environment variables (env.)
+
+Using parameters (params.)
+
+Notifications (email, Slack, etc.)
+
+Artifact archiving (archiveArtifacts)
